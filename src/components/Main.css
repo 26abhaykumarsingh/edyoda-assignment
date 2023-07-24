@@ -6,29 +6,47 @@
   background: url(../assets/BackGround2.svg);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .Main__leftBox {
   display: flex;
   flex-direction: column;
   height: 520px;
-  width: 550px;
+  width: 570px;
   margin-top: 50px;
   margin-right: 250px;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
 .heading {
   font-family: "Raleway", sans-serif;
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 600;
   color: white;
 }
 
-.strike {
+/* .strike {
   text-decoration: line-through;
   text-decoration-color: #ff0000;
   text-decoration-thickness: 5px;
+} */
+
+.strike {
+  position: relative;
+  text-decoration: none;
+}
+
+.strike::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 43%;
+  left: 3%;
+  width: 99%;
+  border-bottom: 1px solid #ff0000;
+  border-width: 6px;
 }
 
 .roboto {

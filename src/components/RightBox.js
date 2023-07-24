@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./RightBox.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +8,10 @@ import { fas } from "@fortawesome/free-solid-svg-icons"; // If you need solid ic
 library.add(fas);
 
 function RightBox() {
+  const [activeDiv, setActiveDiv] = useState("");
+  const [selectedPrice, setSelectedPrice] = useState("");
+  useEffect(() => {}, [activeDiv]);
+
   return (
     <div className="RightBox">
       <div className="RightBox__header">
@@ -46,10 +50,18 @@ function RightBox() {
             </div>
           </div>
         </div>
-        <div className="planOption">
+        <div
+          className={activeDiv === "div2" ? "planOption active" : "planOption"}
+          onClick={() => {
+            setActiveDiv("div2");
+            setSelectedPrice(179);
+          }}
+        >
           <div className="planOption__tag">Recommended</div>
           <div className="planOption__left">
-            <div className="ring"></div>
+            <div className="ring">
+              <FontAwesomeIcon icon="check" className="checkIcon" />
+            </div>
             <div className="planOption__name">12 Months Subscription</div>
           </div>
           <div className="planOption__price">
@@ -68,9 +80,17 @@ function RightBox() {
             </div>
           </div>
         </div>
-        <div className="planOption">
+        <div
+          className={activeDiv === "div3" ? "planOption active" : "planOption"}
+          onClick={() => {
+            setActiveDiv("div3");
+            setSelectedPrice(149);
+          }}
+        >
           <div className="planOption__left">
-            <div className="ring"></div>
+            <div className="ring">
+              <FontAwesomeIcon icon="check" className="checkIcon" />
+            </div>
             <div className="planOption__name">6 Months Subscription</div>
           </div>
           <div className="planOption__price">
@@ -89,9 +109,17 @@ function RightBox() {
             </div>
           </div>
         </div>
-        <div className="planOption">
+        <div
+          className={activeDiv === "div4" ? "planOption active" : "planOption"}
+          onClick={() => {
+            setActiveDiv("div4");
+            setSelectedPrice(99);
+          }}
+        >
           <div className="planOption__left">
-            <div className="ring"></div>
+            <div className="ring">
+              <FontAwesomeIcon icon="check" className="checkIcon" />
+            </div>
             <div className="planOption__name">3 Months Subscription</div>
           </div>
           <div className="planOption__price">
@@ -124,7 +152,8 @@ function RightBox() {
             <div className="discount__top__amount">
               -&nbsp;
               <FontAwesomeIcon icon="indian-rupee-sign" />
-              18,401
+              &nbsp;
+              {(18500 - selectedPrice).toLocaleString("en-IN")}
             </div>
           </div>
           <div className="discount__bottom">
@@ -138,7 +167,8 @@ function RightBox() {
             GST&#x29;
           </div>
           <div className="bill__total__amount">
-            <FontAwesomeIcon icon="indian-rupee-sign" /> 149
+            <FontAwesomeIcon icon="indian-rupee-sign" />{" "}
+            {(selectedPrice + 0.18 * selectedPrice).toLocaleString("en-IN")}
           </div>
         </div>
       </div>

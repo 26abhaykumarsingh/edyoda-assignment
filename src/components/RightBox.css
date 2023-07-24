@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 .RightBox {
-  height: 600px;
-  width: 371px;
+  height: 640px;
+  width: 400px;
   background-color: white;
   margin-top: 50px;
-  margin-left: 70px;
-  padding: 10px;
+  margin-left: 60px;
+  padding: 10px 16px;
   border-radius: 7px;
 }
 
 .RightBox__header {
   /* border: 1px dotted blue; */
-  height: 20%;
+  height: 18%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* _____PLANS______ */
@@ -93,10 +93,11 @@
   padding: 12px;
   font-family: "Roboto", sans-serif;
   color: #3c4852;
+  cursor: pointer;
 }
 
 .planOption__left {
-  width: 50%;
+  width: 70%;
   display: flex;
   align-items: center;
 }
@@ -131,6 +132,7 @@
 .planOption__name {
   margin-left: 12px;
   font-weight: 500;
+  width: 180px;
 }
 
 .planOption__price {
@@ -173,20 +175,40 @@
 
 .expired {
   color: #bebebe;
+  background-color: #e7e7e7;
+  cursor: no-drop;
 }
 
-/* .recommended {
-  border: 2px solid #47ba68;
-}
-
-.recommended .ring {
-  border: 2px solid #47ba68;
+.active .planOption__tag {
   background-color: #47ba68;
 }
 
-.recommended .ring::content {
+.active {
+  border: 2px solid #47ba68;
+  background-color: #d7eddd;
+}
 
+.ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.active .ring {
+  border: 2px solid #47ba68;
+  background-color: #47ba68;
+  color: white;
+}
+
+/* .ring svg {
+  fill: white;
 } */
+
+.checkIcon {
+  fill: white;
+  color: white;
+}
 
 /* _______Bill________ */
 
@@ -229,7 +251,7 @@
   border: 2px solid #de4313;
   color: #de4313;
 
-  background-color: #fec163;
+  background-color: #fcddd4;
   border-radius: 5px;
 }
 
@@ -273,23 +295,27 @@
   color: #3c4852;
 }
 
-.bill__total__amount {
-  font-size: 15px;
+.bill__total_bold {
   font-weight: 500;
+}
+
+.bill__total__amount {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .bill__buttons {
   width: 100%;
-  height: 42px;
+  height: 40px;
   /* border: 1px solid red; */
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: minmax(0, 1fr);
-  gap: 5px;
+  gap: 10px;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .cancelButton {
@@ -300,6 +326,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+  cursor: no-drop;
 }
 
 .proceedButton {
@@ -310,6 +337,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+  cursor: no-drop;
 }
 
 .razorpay {
@@ -318,5 +346,5 @@
   background-size: contain;
   height: 33px;
   width: auto;
-  margin-top: 15px;
+  margin-top: 20px;
 }
