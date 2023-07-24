@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+.Main {
+  height: calc(100vh - 72px);
+  width: 100vw;
+  background: url(../assets/BackGround2.svg);
+  display: flex;
+  justify-content: center;
+}
+
+.Main__leftBox {
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  width: 550px;
+  margin-top: 50px;
+  margin-right: 250px;
+  justify-content: space-between;
+}
+
+.heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: white;
+}
+
+.strike {
+  text-decoration: line-through;
+  text-decoration-color: #ff0000;
+  text-decoration-thickness: 5px;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.blue {
+  color: #0096ff;
+}
+
+.listItem {
+  display: flex;
+  color: white;
+  font-size: 23px;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+}
+
+.listItem__icon {
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  margin-right: 40px;
+}
+
+.bookIcon {
+  background: url(../assets/book.svg);
+  background-size: contain;
+}
+
+.clockIcon {
+  background: url(../assets/clock.svg);
+  background-size: contain;
+}
+
+.liveIcon {
+  background: url(../assets/live.svg);
+  background-size: contain;
+}
+
+.hatIcon {
+  background: url(../assets/hat.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.adsIcon {
+  background: url(../assets/ads.svg);
+  background-size: contain;
+}

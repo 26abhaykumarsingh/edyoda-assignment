@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+.RightBox {
+  height: 600px;
+  width: 371px;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 70px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.RightBox__header {
+  /* border: 1px dotted blue; */
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+.RightBox__header__top {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+
+.signUp,
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  width: 85px;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUp__icon,
+.subscribe__icon {
+  height: 30px;
+  width: 30px;
+  background-color: #0096ff;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.signUp__text,
+.subscribe__text {
+  font-size: 12px;
+  color: #3c4852;
+  font-weight: 400;
+}
+
+.RightBox__heading {
+  color: #3c4852;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* _____PLANS______ */
+
+.planContainer {
+  /* border: 1px dotted red; */
+  height: 35%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.planOption {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #bebebe;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 12px;
+  font-family: "Roboto", sans-serif;
+  color: #3c4852;
+}
+
+.planOption__left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.planOption__tag {
+  position: absolute;
+  height: 23%;
+  width: 90px;
+  top: 0;
+  left: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bebebe;
+  color: white;
+  font-size: 9px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.expired .planOption__tag {
+  background-color: #f77171;
+}
+
+.ring {
+  width: 21.5px;
+  height: 21.5px;
+  border: 2px solid #bebebe;
+  border-radius: 20px;
+}
+
+.planOption__name {
+  margin-left: 12px;
+  font-weight: 500;
+}
+
+.planOption__price {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  /* border: 1px solid pink; */
+}
+
+.price__top {
+  display: flex;
+}
+
+.price__botton {
+  display: flex;
+}
+
+.planOption__price {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plan__price {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.price__botton {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.mo {
+  font-size: 9px;
+  color: #bebebe;
+}
+
+.expired {
+  color: #bebebe;
+}
+
+/* .recommended {
+  border: 2px solid #47ba68;
+}
+
+.recommended .ring {
+  border: 2px solid #47ba68;
+  background-color: #47ba68;
+}
+
+.recommended .ring::content {
+
+} */
+
+/* _______Bill________ */
+
+.bill {
+  width: 100%;
+  height: 22%;
+  /* border: 2px dotted black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 15px;
+  border-top: 2px solid #bebebe;
+}
+
+.bill__header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #3c4852;
+  /* border: 1px solid black; */
+  padding-top: 10px;
+}
+
+.bill__header__amount {
+  font-weight: 500;
+}
+
+.bill__discount {
+  width: 100%;
+  height: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 7px 20px;
+  border: 2px solid #de4313;
+  color: #de4313;
+
+  background-color: #fec163;
+  border-radius: 5px;
+}
+
+.discount__top {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discount__top__amount {
+  color: #3c4852;
+  font-weight: 500;
+}
+
+.discount__bottom {
+  display: flex;
+  align-items: center;
+}
+
+.discount__icon {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  background: url(../assets/clockDraining.svg);
+  background-repeat: no-repeat;
+  color: #de4313;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.bill__total {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #3c4852;
+}
+
+.bill__total__amount {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.bill__buttons {
+  width: 100%;
+  height: 42px;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr);
+  gap: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.cancelButton {
+  grid-column: 1/2;
+  color: #f77171;
+  border: 2px solid #f77171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.proceedButton {
+  grid-column: 2/3;
+  color: white;
+  background-color: #47ba68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.razorpay {
+  background: url(../assets/razorpay.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 33px;
+  width: auto;
+  margin-top: 15px;
+}
